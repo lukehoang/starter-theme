@@ -1,0 +1,222 @@
+// Forms
+.mktoForm{
+    width: 100% !important;
+    max-width: 837px;
+    margin: auto;
+}
+.mktoForm .mktoGutter{
+    display: none;
+}
+.mktoHasWidth{
+    width: 100% !important;
+}
+.mktoForm .mktoFieldWrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.mktoForm .mktoAsterix {
+    color: $orange !important;
+    font-weight: 400;
+    @include media-breakpoint-down(md) {
+        float: right !important;
+    }
+}
+.mktoForm .mktoFormRow {
+    width: 100%;
+}
+.mktoForm .mktoFormCol {
+    width: 100%;
+}
+.mktoForm input[type=text], .mktoForm input[type=url], .mktoForm input[type=email], .mktoForm input[type=tel], .mktoForm input[type=number], .mktoForm input[type=date], .mktoForm select.mktoField {
+    width: 100% !important;
+    height: 50px !important;
+    font-size: 20px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+.mktoForm textarea.mktoField{
+    width: 100% !important;
+    height: 275px !important;
+    font-size: 20px !important;
+    padding: .6em .2em!important;
+    font-family: 'Poppins', sans-serif !important;
+    &+.mktoError {
+        right: auto !important;
+        bottom: -25px !important;
+        .mktoErrorMsg{
+            font-size: 13px;
+        }
+    }
+}
+.mktoForm .mktoLabel {
+    &#LblpatientFirstName,
+    &#LblpatientLastName,
+    &#LblEmail,
+    &#LblConfirmEmail,
+    &#LblLeadRole,
+    &#LblpatientPhoneNumber{
+        text-transform: uppercase;
+        color: $med-gray;
+        font-size: 20px;
+        width: fit-content !important;
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif !important;
+    }
+}
+.mktoForm .mktoFormRow {
+    &:nth-child(8){ //tell us a bit about why you should be ...
+        color: $med-gray;
+        font-size: 20px;
+        width: fit-content !important;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif !important;
+        .mktoFormCol{
+            margin-bottom: 5px !important;
+        }
+        .mktoClear{
+            display: none;
+        }
+        .mktoFieldWrap{
+            .mktoHtmlText>div{
+                &:after{
+                    content: '*';
+                    color: $orange;
+                    margin-left: 5px;
+                }
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            *{
+                padding: 0;
+            }
+        }
+    }
+    &:nth-child(9){ //Please limit story submissions to 350-400 words. Add ...
+        font-size: 16px;
+        width: fit-content !important;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif !important;
+        .mktoOffset{
+            display: none;
+        }
+        .mktoClear{
+            display: none;
+        }
+    }
+    &:nth-child(10){ //Please limit story:: textarea field
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-family: 'Poppins', sans-serif !important;
+        .mktoOffset{
+            display: none;
+        }
+        .mktoClear{
+            height: 5px;
+        }
+        .mktoRequiredField .mktoAsterix {
+            display: none !important;
+        }
+    }
+    &:nth-child(11){ //Required field text
+        font-size: 20px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 10px;
+        font-family: 'Poppins', sans-serif !important;
+        #LblpatientPortraitsStory{
+            display: none;
+        }
+        .mktoOffset{
+            display: none;
+        }
+        .mktoClear{
+            display: none;
+        }
+        .mktoRequiredField .mktoAsterix {
+            display: none !important;
+        }
+        &:before{
+            position: absolute;
+            content: '*';
+            color: $orange;
+            left: -10px;
+            font-size: 20px;
+        }
+    }
+    &:nth-child(12){ //consent row
+        font-size: 16px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 30px;
+        font-family: 'Poppins', sans-serif !important;
+        width: calc(100% - 30px);
+        .mktoOffset{
+            display: none;
+        }
+        .mktoClear{
+            display: none;
+        }
+        .mktoRequiredField .mktoAsterix {
+            // display: none !important;
+            position: absolute;
+            top: 4px;
+            left: 9px;
+            font-size: 20px;
+            @include media-breakpoint-down(sm) {
+                left: 12px;
+            }
+        }
+        #LblAgreetoPrivacyPolicy{
+            // display: none;
+            padding: 0;
+        }
+        .mktoFieldDescriptor{
+            position: absolute;
+            left: -25px;
+        }
+        .mktoCheckboxList{
+            width: 23px !important;
+            margin-left: -8px !important;
+        }
+        .mktoError{
+            right: unset !important;
+        }
+    }
+}
+.mktoForm .mktoButtonRow {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    span{
+        margin-left: 0 !important;
+    }
+    .mktoButtonWrap.mktoSimple button.mktoButton{
+        background-image: none;
+        background-color: $white;
+        border: 2px solid #717171;
+        border-radius: 5px 10px 10px;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        height: 46px;
+        padding-left: 32px;
+        padding-right: 52px;
+        padding-top: 6px;
+        color: $med-gray;
+        text-transform: uppercase;
+        position: relative;
+        &:after{
+            position: absolute;
+            right: 25px;
+            font-family: "dashicons";
+            content: "\f345";
+            color: $bright-orange;
+        }
+        &:hover{
+            color: $white !important;
+            background-color: $charchoal !important;
+            border: 2px solid $charchoal !important;
+        }
+    }
+}

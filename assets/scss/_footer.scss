@@ -1,0 +1,67 @@
+footer {
+    background-color: $dark;
+    padding: 50px 0;
+
+    
+    p, small, a{
+        color: $white;
+        font-size: 0.75rem;
+    }
+
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .social-media-group{
+        .social-media__icon{
+            display: inline-block;
+            width: 29px;
+            height: 29px;
+            &:after{
+                content:"";
+                width: 29px;
+                height: 29px;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+        .icon-facebook{
+            &:after{
+                background-image: url('../images/icon-FB.svg');
+            }
+            &:hover:after{
+                background-image: url('../images/icon-FB-orange.svg');
+            }
+        }
+        .icon-instagram{
+            &:after{
+                background-image: url('../images/icon-instagram.svg');
+            }
+            &:hover:after{
+                background-image: url('../images/icon-instagram-orange.svg');
+            }
+        }
+        .icon-X{
+            &:after{
+                background-image: url('../images/icon-X.svg');
+            }
+            &:hover:after{
+                background-image: url('../images/icon-X-orange.svg');
+            }
+        }
+        .icon-linkedin{
+            &:after{
+                background-image: url('../images/icon-linkedin.svg');
+            }
+            &:hover:after{
+                background-image: url('../images/icon-linkedin-orange.svg');
+            }
+        }
+    }
+}

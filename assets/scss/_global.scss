@@ -1,0 +1,376 @@
+// Global CSS
+.bg-gradient-1{
+    background: rgb(251,233,215);
+    background: linear-gradient(169deg, rgba(251,233,215,1) 0%, rgba(253,252,250,1) 20%, rgba(242,219,213,1) 40%, rgba(227,242,243,1) 60%, rgba(250,252,252,1) 80%, rgba(202,226,231,1) 100%);
+}
+.bg-gradient-2{
+    background: rgb(248,232,210);
+    background: linear-gradient(90deg, rgba(248,232,210,1) 0%, rgba(254,249,224,1) 50%, rgba(252,251,246,1) 100%);
+}
+.bg-gradient-3{
+    background: rgb(241,247,247);
+    background: linear-gradient(90deg, rgba(241,247,247,1) 0%, rgba(250,252,251,1) 50%, rgba(232,244,244,1) 100%);
+}
+.bg-gradient-4{
+    background: rgb(246,236,234);
+    background: linear-gradient(90deg, rgba(246,236,234,1) 0%, rgba(253,252,250,1) 50%, rgba(248,242,228,1) 100%);
+}
+
+a{
+    color: $orange;
+}
+.custom-btn-outline{
+    border: 2px solid $med-gray !important;
+    color: $med-gray;
+    border-radius: 10px !important;
+    border-top-left-radius: 5px !important;
+    padding: 6px 32px !important;
+    width: fit-content !important;
+    &:hover{
+        color: $white !important;
+        background-color: $charchoal !important;
+        border: 2px solid $charchoal !important;
+    }
+}
+
+.custom-btn-outline--arrow{
+    border: 2px solid $med-gray !important;
+    color: $med-gray;
+    border-radius: 10px !important;
+    border-top-left-radius: 5px !important;
+    padding: 6px 47px 6px 32px !important;
+    position: relative;
+    width: fit-content;
+    &:hover{
+        color: $white !important;
+        background-color: $charchoal !important;
+        border: 2px solid $charchoal !important;
+    }
+    &:after{
+        position: absolute;
+        right: 20px;
+        font-family: "dashicons";
+        content: "\f345";
+        color: $bright-orange;
+    }
+}
+
+.custom-text--arrow{
+    color: $med-gray;
+    position: relative;
+    width: fit-content;
+    padding-right: 25px;
+    text-decoration: none;
+    &:after{
+        position: absolute;
+        right: 0px;
+        font-family: "dashicons";
+        content: "\f345";
+        color: $bright-orange;
+    }
+    &:hover{
+        color: $charchoal;
+        text-decoration: underline !important;
+    }
+}
+.custom-text--external{
+    color: $med-gray;
+    position: relative;
+    width: fit-content;
+    padding-right: 25px;
+    text-decoration: none;
+    &:after{
+        position: absolute;
+        right: 0px;
+        font-family: "dashicons";
+        content: "\f504";
+        color: $bright-orange;
+    }
+    &:hover{
+        color: $charchoal;
+        text-decoration: underline !important;
+    }
+}
+.custom-btn-text{
+    border: 0px solid $med-gray !important;
+    width: fit-content;
+    &:hover{
+        color: $black;
+    }
+}
+
+.custom-btn-next{
+    border: 2px solid $light-gray !important;
+    color: $med-gray;
+    padding: 6px 47px 6px 32px !important;
+    position: relative;
+    width: fit-content;
+    &:hover{
+        border: 2px solid $charchoal !important;
+    }
+    &:after{
+        position: absolute;
+        right: 20px;
+        font-family: "dashicons";
+        content: "\f345";
+        color: $bright-orange;
+    }
+    text-decoration: none;
+    color: $charchoal;
+}
+.custom-btn-prev{
+    border: 2px solid $light-gray !important;
+    color: $med-gray;
+    padding: 6px 32px 6px 47px !important;
+    position: relative;
+    width: fit-content;
+    &:hover{
+        border: 2px solid $charchoal !important;
+    }
+    &:after{
+        position: absolute;
+        left: 20px;
+        font-family: "dashicons";
+        content: "\f341";
+        color: $bright-orange;
+    }
+    text-decoration: none;
+    color: $charchoal;
+}
+
+// dropdown
+.dropdown.dropdown--btn{
+    .btn:focus-visible {
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+    &:hover{
+        .custom-btn-outline{
+            color: $white !important;
+            background-color: $charchoal !important;
+            border: 2px solid $charchoal !important;
+        }
+    }
+    .dropdown-toggle{
+        position: relative;
+        padding: 6px 47px 6px 32px !important;
+        &[aria-expanded="true"] {
+            color: $white !important;
+            background-color: $charchoal !important;
+            border: 2px solid $charchoal !important;
+            &:after{
+                content: "\f343";
+            }
+        }
+        &:after{
+            position: absolute;
+            right: 20px;
+            font-family: "dashicons";
+            content: "\f347";
+            color: $bright-orange;
+            border: 0;
+        }
+    }
+    .dropdown-menu {
+        border: 2px solid $med-gray !important;
+        border-radius: 10px;
+        margin-top: 20px !important;
+        &.show{
+            top: calc(100% - 5px) !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            inset: calc(100% - 5px) auto auto 50% !important;
+            &::after{
+                content:"";
+                height: 17px;
+                width: 100%;
+                background-image: url('../images/polygon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                position: absolute;
+                top: -17px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+        }
+    }
+    .dropdown-item{
+        position: relative;
+        padding-left: 50px;
+        &:after{
+            content:'';
+            position: absolute;
+            left: 10px;
+            width: 29px;
+            height: 29px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        &:hover{
+            background-color: $charchoal;
+            color: $white;
+        }
+    }
+    .icon-facebook{
+        &:after{
+            background-image: url('../images/icon-FB-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-FB-orange.svg');
+        }
+    }
+    .icon-instagram{
+        &:after{
+            background-image: url('../images/icon-instagram-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-instagram-orange.svg');
+        }
+    }
+    .icon-X{
+        &:after{
+            background-image: url('../images/icon-X-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-X-orange.svg');
+        }
+    }
+    .icon-linkedin{
+        &:after{
+            background-image: url('../images/icon-linkedin-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-linkedin-orange.svg');
+        }
+    }
+    .icon-email{
+        &:after{
+            background-image: url('../images/icon-email-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-email-orange.svg');
+        }
+    }
+}
+
+// dropdown nav
+.dropdown.menu-item{
+    .dropdown-toggle{
+        position: relative;
+        padding-right: 47px !important;
+        &[aria-expanded="true"] {
+            &:after{
+                content: "\f343";
+            }
+        }
+        &:after{
+            position: absolute;
+            right: 20px;
+            font-family: "dashicons";
+            content: "\f347";
+            color: $bright-orange;
+            border: 0;
+        }
+        &:focus-visible {
+            outline: 0 !important;
+            box-shadow: none !important;
+        }
+        &:hover{
+            text-decoration: none !important;
+        }
+        @include media-breakpoint-down(md) {
+            padding-left: 0 !important;
+        }
+    }
+    .dropdown-menu {
+        border: 2px solid $med-gray !important;
+        border-radius: 10px;
+        margin-top: 20px !important;
+        &.show{
+            top: calc(100% - 5px) !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            inset: calc(100% - 5px) auto auto 50% !important;
+            &::after{
+                content:"";
+                height: 17px;
+                width: 100%;
+                background-image: url('../images/polygon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                position: absolute;
+                top: -17px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+            @include media-breakpoint-down(md) {
+                transform: translateX(0%) !important;
+            }
+        }
+        .menu-item{
+            position: relative;
+            &:after{
+                content:'';
+                position: absolute;
+                left: 10px;
+                top: 4px;
+                width: 29px;
+                height: 29px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+    .dropdown-item{
+        padding-left: 50px;
+        &:hover{
+            background-color: $charchoal;
+            color: $white;
+        }
+    }
+    .icon-facebook{
+        &:after{
+            background-image: url('../images/icon-FB-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-FB-orange.svg');
+        }
+    }
+    .icon-instagram{
+        &:after{
+            background-image: url('../images/icon-instagram-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-instagram-orange.svg');
+        }
+    }
+    .icon-X{
+        &:after{
+            background-image: url('../images/icon-X-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-X-orange.svg');
+        }
+    }
+    .icon-linkedin{
+        &:after{
+            background-image: url('../images/icon-linkedin-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-linkedin-orange.svg');
+        }
+    }
+    .icon-email{
+        &:after{
+            background-image: url('../images/icon-email-dark.svg');
+        }
+        &:hover:after{
+            background-image: url('../images/icon-email-orange.svg');
+        }
+    }
+}
+

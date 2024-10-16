@@ -1,0 +1,36 @@
+.section--back-to-gallery{
+    &:hover{
+        background-color: $bright-orange;
+            transition: all .25s;
+            .custom-btn-text{
+            background-color: $transparent !important;
+            color: $white !important;
+            transition: none;
+            .dashicons {
+                color: $white !important;
+            transition: all .25s;
+        }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        background-color: $bright-orange;
+        .custom-btn-text{
+            background-color: $transparent !important;
+            color: $white !important;
+            .dashicons {
+                color: $white !important;
+            }
+        }
+    }
+}
+
+.portrait-art{
+    max-height: calc(100vh - 135px);
+    width: auto !important;
+    display: block;
+    margin: auto;
+}
+.portrait-artist{
+    border-radius: 20px;
+    border-top-left-radius: 0;
+}

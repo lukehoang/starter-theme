@@ -1,0 +1,98 @@
+// Page: Gallery
+
+.col-right{
+    margin-top: 135px;
+    @include media-breakpoint-down(md) {
+        margin-top: 0px;
+    }
+}
+
+.gallery__intro{
+    padding-bottom: 65px;
+}
+.card{
+    box-shadow: 1px 1px 5px $shadow;
+}
+.card--portrait {
+    border: unset;
+    border-radius: 25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 45px;
+    margin: 1.5rem .7rem;
+
+    @include media-breakpoint-down(md) {
+        margin: 1rem 0rem;
+    }
+
+    .card-body{
+        padding: 24px 32px;
+        h3{
+            line-height: 34px;
+        }
+    }
+    .card-patient-name{
+        font-size: 0.95rem;
+        line-height: 22px;
+        margin-top: 1rem;
+    }
+    .card-footer{
+        padding: 18px 30px;
+        background-color: transparent;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        transition: all .25s;
+        .card-link{
+            color: $med-gray;
+        }
+    }
+    &:hover{
+        .card-footer{
+            background-color: $charchoal;
+        }
+        .card-link{
+            color: $white;
+        }
+        .zoom-effect {
+            transform: scale(1.05); /* Adjust scale value to control zoom level */
+        }
+    }
+    .card-img-top{
+        overflow: hidden;
+        border-top-right-radius: 30px;
+        position: relative;
+        .portrait-wip{
+            filter: blur(20px);
+        }
+        .portrait-wip-banner{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            width: 100%;
+        }
+    }
+    .zoom-effect {
+        transition: transform 0.25s ease;
+        object-fit: cover; /* Optional, depending on your needs */
+        width: 100%; /* Adjust as needed */
+        height: auto; /* Adjust as needed */
+        display: block; /* To prevent inline image whitespace */
+    }
+    
+}
+.about-the-artist__photo{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 25px !important;
+}
+.card-artist{
+    border-radius: 25px;
+    border-top-left-radius: 5px;
+}
+    
